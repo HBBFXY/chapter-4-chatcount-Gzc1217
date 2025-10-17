@@ -1,25 +1,25 @@
-# 从键盘读取一行输入
-s = input()
+# 从键盘输入一行字符
+text = input("请输入一行字符：")
 
-# 初始化四个计数器
-letters = 0
+# 初始化计数器
+english_chars = 0
 digits = 0
 spaces = 0
 others = 0
 
-# 逐个字符判断类型
-for c in s:
-    if c.isalpha():  # 英文字母
-        letters += 1
-    elif c.isdigit():  # 数字
+# 遍历每个字符并分类统计
+for char in text:
+    if char.isalpha():  # 判断是否为英文字母
+        english_chars += 1
+    elif char.isdigit():  # 判断是否为数字
         digits += 1
-    elif c.isspace():  # 空格
+    elif char.isspace():  # 判断是否为空格
         spaces += 1
-    else:  # 其他字符
+    else:
         others += 1
 
-# 按格式输出
-print(f"英文字符: {letters}")
+# 按照要求格式输出结果
+print(f"英文字符: {english_chars}")
 print(f"数字: {digits}")
 print(f"空格: {spaces}")
 print(f"其他字符: {others}")
